@@ -1,0 +1,14 @@
+
+   <div class="tweet-tweet">
+   <div class='tweet-img-content'> 
+       <%= image_tag tweet.image.variant(resize: '400x400'), class: 'tweet-image' if tweet.image.attached? %>
+   </div>
+   <div class="more"> 
+      <p><%= tweet.content %></p>
+      <span class="name">
+      <a href="/users/<%= tweet.user.id %>">
+          <span>投稿者</span><%= tweet.user.nickname %>
+      </a>
+      </span>
+   </div>
+   </div>
