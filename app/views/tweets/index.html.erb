@@ -1,0 +1,33 @@
+<%= render partial: "shared/header"%>
+
+<div class="contents">
+  <div class="first-view">
+       <%= link_to image_tag("cache_Messagep37593.jpeg", class:"top-image"), "#" %>
+  </div>
+  <div class="contents-top">
+   <h2>papaにしかわからない楽しさや悩みを共有してみませんか？<br>それを共有することで今日も笑顔になれる家族がたくさんいます！<br>まずは気軽に投稿してみよう！！</h2>
+  </div>
+  <div class="contenst-middle">
+   <h3>何ができるの？</h3>
+   <ul class="contents-middle-lists">
+        <li class="li-style">  
+          <%= link_to image_tag("detail1_2fc7d375-0df9-411d-bca0-f153e2f57af9.jpeg", class:"middle-image"), "#" %>
+          <h4 class="middle-content"><span class= "blue">1,離乳食や離乳食離れの食事って何あげればいいの？</span><br>・離乳食のあげる時期によって食べれるものが違う<br>・冷凍することで準備が楽にもなる<br>・お父さんが食べる見本を見せたら食べるかもしれない</h4>
+        <li class="li-style">  
+          <%= link_to image_tag("IMG_5941.jpeg", class:"middle-image"), "#" %>
+          <h4 class="middle-content"><span class= "blue">２,おうちで何して遊ぶ？</span><br>・この時期の子供に適切な遊びはなんだろう<br>・与えるおもちゃは何がいいだろう<br>・お父さんが絵本を読んでくれたら喜ぶかもしれない　　　　　　</h4>
+        <li class="li-style">  
+          <%= link_to image_tag("IMG_8693.jpg", class:"middle-image"), "#" %>
+          <h4 class="middle-content"><span class= "blue">3,イヤイヤ期が来たときの対応は？</span><br>・地面にのけぞって泣き喚いてるときそうしたらいい？<br>・何かを指差してあっちいけこっちいけと指示される<br>・イヤイヤになる前に前もってできることはないか？ 　 　　　</h4>
+        </li>
+      </ul>
+  <h5>投稿一覧</h5>
+  <div class="contents-row">
+   <% @tweets.each do |tweet| %>
+   <%= render partial: "shared/tweet", locals: { tweet: tweet } %>
+    
+  <% end %>
+  </div>
+</div>
+<%= render partial: "shared/footer"%>
+
