@@ -16,6 +16,11 @@ def create
   end
 end
 
+def destroy
+  tweet = Tweet.find(params[:id]) 
+  tweet.destroy
+end
+
 private
   def tweet_params
     params.require(:tweet).permit(:content,:image,:category_id,:condition_id,:baby_age_id,:baby_gender_id).merge(user_id: current_user.id)

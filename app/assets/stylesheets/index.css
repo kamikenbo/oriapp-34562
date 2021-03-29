@@ -124,6 +124,16 @@ h5:before {
   
 } 
 
+.more_list {
+  display: flex;
+  text-align: center;
+  justify-content:center;
+}
+
+.more_list li {
+margin: 10px,10px;
+}
+
 .more {
   width: 35%;
   text-align: center;

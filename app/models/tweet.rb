@@ -2,6 +2,7 @@ class Tweet < ApplicationRecord
   belongs_to :user
   has_many :messages
   has_one_attached :image
+  # has_one_attached :video
 
   with_options presence: true do
     validates :content
