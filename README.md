@@ -53,7 +53,7 @@
 
 association
 -has_many :tweets
--has_many :messages
+-has_many :comments
 
 
 
@@ -70,7 +70,7 @@ association
 
 association
 -belongs_to :user
--has_many :messages
+-has_many :comments
 
 active hash
 -belongs_to :category_id

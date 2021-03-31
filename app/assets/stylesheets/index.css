@@ -121,17 +121,21 @@ h5:before {
   text-align: center;
   justify-content:center;
   padding-top: 40px;
-  
 } 
 
-.more_list {
-  display: flex;
+.tweet-img-content {
+  height: 50%;
   text-align: center;
   justify-content:center;
+  padding-top: 40px;
 }
 
-.more_list li {
-margin: 10px,10px;
+.more_list {
+  width: 20%;
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  margin: auto;
 }
 
 .more {

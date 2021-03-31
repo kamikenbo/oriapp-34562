@@ -1,4 +1,4 @@
-/* border-bottom: 1px solid #eee; */
+
 .login-flash-message {
   text-align: center;
 }
@@ -65,52 +65,13 @@
   font-weight: bold;
 }
 
-.weight-bold-text {
+/* .weight-bold-text {
   font-weight: bold;
   min-width: 170px;
   margin-bottom: 10px;
 }
 
 
-/* .question {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background: #0099e8;
-  color: #FFF;
-  font-size: 13px;
-  text-align: center;
-  line-height: 20px;
-  text-decoration: none;
-  margin-left: 5px;
-}
-
-.question-text {
-  display: flex;
-} */
-
-/* /共通 */
-
-/* 出品画像 */
-/* .img-upload {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 2vh 0;
-}
-
-.click-upload {
-  margin: 15px 0;
-  min-width: 250px;
-}
-
-.click-upload>p {
-  margin-bottom: 15px;
-} */
-
-/* /出品画像 */
-
-/* 商品名と商品説明 */
 .new-items {
   padding: 2vh 0;
 }
@@ -128,9 +89,7 @@
   margin-top: 2vh;
 }
 
-/* /商品名と商品説明 */
 
-/* 商品の詳細など */
 .items-detail {
   display: flex;
   justify-content: space-between;
@@ -149,7 +108,7 @@
 /* /商品の詳細など */
 
 /* 販売価格 */
-.sell-price {
+/* .sell-price {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -164,25 +123,17 @@
   justify-content: space-between;
 }
 
-.price-text {
-  /* min-width: 170px; */
-  display: flex;
-  align-items: center;
-}
 
-.sell-yen {
-  font-size: 18px;
-}
 
 .price-input {
   height: 30px;
   text-align: right;
   padding-right: 10px;
-}
+} */ */
 
 /* /販売価格 */
 
-/* 注意書き */
+/* 注意書き
 .caution {
   padding: 5vh 0;
 }
@@ -190,7 +141,7 @@
 .sentence>a {
   color: #0099e8;
   text-decoration: none;
-}
+} */
 
 /* /注意書き */
 
@@ -220,371 +171,3 @@
   text-align: center;
  
 }
-
-/* .back-btn {
-  background: #aaa;
-  border: 1px solid #aaa;
-  color: #fff;
-  padding: 15px 35%;
-  text-decoration: none;
-} */
-
-/* /下部ボタン */
-/* 
-.items-sell-footer {
-  background-color: #f5f5f5;
-  width: 60vw;
-  padding: 3ch 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-.items-sell-footer>.menu {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 3vh 0;
-}
-
-.menu>li>a {
-  color: black;
-  font-size: 12px;
-  margin: 2vw;
-}
-
-.inc {
-  font-size: 13px;
-}
-
-.title {
-  font-weight: bold;
-}
-
-.title--big {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.title--big i {
-  font-style: italic;
-  font-size: 1.8em;
-}
-
-header.header {
-  padding: 10px;
-  border-bottom: 1px solid #D8D8D8;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  height: 62px;
-}
-
-/* header.header div.header__bar.row {
-  position: relative;
-}
-
-header.header div.header__bar.row h1.grid-6 {
-  font-size: 20px;
-  line-height: 41px;
-  float: left;
-}
-
-header.header div.header__bar.row h1.grid-6 a {
-  display: block;
-}
-
-header.header div.header__bar.row div.grid-6 {
-  float: right;
-  text-align: right;
-}
-
-header.header div.header__bar.row div.grid-6 a.post {
-  width: 120px;
-  display: inline-left;
-  margin-left: 10px;
-} */
-/* 
-header.header .user_nav {
-  position: relative;
-  height: 100px;
-  right: 0;
-}
-
-header.header .user_nav span {
-  top: 5px;
-  display: block;
-  float: left;
-  margin-left: 30px;
-  width: 150px;
-  height: 50px;
-  font-size: 1em;
-  cursor: pointer;
-  position: relative;
-}
-
-header.header .user_nav span:after {
-  content: '▼';
-  font-size: .7em;
-  margin-left: -4px;
-}
-
-header.header .user_nav span:hover ul {
-  color: #57C3E9;
-  display: block;
-}
-
-header.header .user_nav ul {
-  display: none;
-  position: absolute;
-  top: 46px;
-  right: 0;
-  border-left: 1px solid #d8d8d8;
-  border-right: 1px solid #d8d8d8;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header.header .user_nav ul li {
-  background-color: #f0f0f0;
-}
-
-header.header .user_nav ul li a {
-  display: block;
-  padding: 10px 20px;
-  text-align: left;
-  border-bottom: 1px solid #d8d8d8;
-}
-
-.form {
-  background: url(https://dl.dropboxusercontent.com/u/5840617/DeathtoStock_Wired3.jpg);
-  background-size: cover;
-}
-
-.form .contents {
-  position: absolute;
-  left: 0;
-  top: 30%;
-  bottom: 0;
-  right: 0;
-}
-
-.form footer {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-}
-
-div.contents.row h2 {
-  margin: 20px 0;
-  padding: 0;
-  font-weight: normal;
-}
-
-div.contents.row h2 strong {
-  font-weight: bold;
-  padding-right: 5px;
-  font-size: 1.2em;
-}
-
-div.contents.row .new_user {
-  font-family: "游ゴシック", "YuGothic";
-}
-
-div.contents.row div.content_post {
-  margin: 20px 0;
-  padding: 30px;
-  position: relative;
-  height: 400px;
-  color: #fff;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 3px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-}
-
-div.contents.row div.content_post:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000000', endColorstr='#FFA60000');
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjYyJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC44NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(62%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.85)));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.85) 100%);
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.85) 100%);
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.85) 100%);
-  z-index: 1;
-  border-radius: 3px;
-}
-
-div.contents.row div.content_post .more {
-  position: absolute;
-  cursor: pointer;
-  top: 20px;
-  right: 30px;
-  z-index: 2;
-  height: 100px;
-  width: 80px;
-  text-align: right;
-}
-
-div.contents.row div.content_post .more:hover ul.more_list {
-  display: block;
-}
-
-div.contents.row div.content_post .more ul.more_list {
-  position: absolute;
-  text-align: left;
-  width: 80px;
-  right: 0;
-  font-size: 12px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  display: none;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
-}
-
-div.contents.row div.content_post .more ul.more_list li {
-  border-bottom: 1px solid #ddd;
-}
-
-div.contents.row div.content_post .more ul.more_list li:last-child {
-  border-bottom: 0;
-}
-
-div.contents.row div.content_post .more ul.more_list li a {
-  display: block;
-  padding: 5px;
-}
-
-div.contents.row div.content_post .more ul.more_list li a:hover {
-  background-color: #57C3E9;
-  color: #fff;
-}
-
-div.contents.row div.content_post p {
-  position: absolute;
-  left: 30px;
-  right: 100px;
-  bottom: 30px;
-  margin: 0;
-  font-size: 20px;
-  z-index: 2;
-  font-weight: bold;
-  text-shadow: 0 0 2px #000, 0 0 1px #000, 0 0 1px #000;
-}
-
-div.contents.row div.content_post span.name {
-  position: absolute;
-  right: 30px;
-  bottom: 30px;
-  z-index: 2;
-  font-size: 13px;
-}
-
-div.contents.row div.content_post span.name a {
-  display: block;
-  color: #aaa;
-}
-
-div.contents.row div.content_post span.name a:hover {
-  text-decoration: underline;
-  color: #aaa;
-}
-
-div.contents.row div.content_post span.name span {
-  font-size: 9px;
-  display: block;
-}
-
-div.contents.row .success {
-  margin: 20px 0;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: white;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-div.contents.row .success h3 {
-  margin: 10px auto;
-}
-
-form input,
-form textarea {
-  width: 100%;
-  margin: 5px 0 15px;
-  padding: 10px;
-  border: 1px solid #D8D8D8;
-  border-radius: 5px;
-  font-family: "游ゴシック", "YuGothic";
-}
-
-
-
-form input[type="submit"]:hover {
-  background-color: #84d3ef;
-}
-
-.container {
-  margin: 20px 0;
-  padding: 30px;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: white;
-  box-sizing: border-box;
-}
-
-.container h3 {
-  margin: 0 0 20px;
-  text-align: center;
-  font-weight: normal;
-  font-size: 20px;
-  color: #666;
-}
-
-.comments {
-  padding: 5px;
-  margin-top: 15px;
-}
-
-.comments a {
-  color: #57C3E9;
-}
-
-.comments a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  margin: 30px auto;
-  padding: 10px;
-  color: #D8D8D8;
-}
-
-footer p {
-  text-align: center;
-}
-
-.search-form {
-  text-align: center;
-  padding-top: 32px;
-}
-
-.search-form .search-input {
-  width: 30%;
-  margin-right: 10px;
-}
-
-.search-form .search-btn {
-  width: 10%;
-} */ */

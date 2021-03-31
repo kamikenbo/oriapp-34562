@@ -1,4 +1,7 @@
-
+<%= render partial: "shared/second_header"%>
+<div class= "tweet-mypg">MY PAGE</div>
+ <div class="contents-row">
+   <% @tweets.each do |tweet| %>
    <div class="tweet-tweet">
    <div class='tweet-img-content'> 
        <%= image_tag tweet.image.variant(resize: '400x400'), class: 'tweet-image' if tweet.image.attached? %>
@@ -6,14 +9,12 @@
           <li>
             <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
           </li>
-          <% if user_signed_in? && current_user.id == tweet.user_id %>
           <li>
             <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
           </li>
           <li>
             <%= link_to '削除', tweet_path(tweet.id), method: :delete %>
           </li>
-          <% end %>
         </ul>
    </div>
    <div class="more"> 
@@ -21,7 +22,10 @@
       <span class="name">
       <a href="/users/<%= tweet.user.id %>">
           <span>投稿者</span><%= tweet.user.nickname %>
-       </a> 
+      </a>
       </span>
    </div>
    </div>
+    
+  <% end %>
+  </div>
