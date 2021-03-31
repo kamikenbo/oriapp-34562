@@ -3,7 +3,7 @@
 <div class="tweet-contents">
  <div class="tweet-header ">
   <div class="tweet-main">
-    <div class=tweet-text>投稿する</div>
+    <div class=tweet-text>編集する</div>
     <%= form_with(model: @tweet, local: true) do |f| %>
       <%= f.file_field :image, id: "image" ,class:"tweet-image-view"%>
       <%# <%= f.file_field :video, id: "video" ,class:"tweet-type-view"%> 
@@ -23,7 +23,7 @@
        <div class="baby-gender">
       <%= f.collection_select(:baby_gender_id, BabyGender.all, :id, :name, {}, {class:"select-box", id:"Baby_gender_id"}) %>
       </div>
-      <%= f.submit "投稿する" ,class:"tweet-btn" %>
+      <%= f.submit "編集する" ,class:"tweet-btn" %>
     <% end %>
   </div>
  </div>
