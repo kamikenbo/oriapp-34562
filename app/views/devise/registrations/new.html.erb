@@ -57,16 +57,6 @@
       <%= f.text_area :baby_name, class:"input-name", id:"baby-name", placeholder:"例) 彩月" %>
     </div>
   </div>
-  <%# <div class="form-group"> %>
-    <%# <div class='form-text-wrap'>
-      <label class="form-text">お子様の性別</label>
-      <span class="indispensable">必須</span>
-    </div> %>
-    <%# <div class='input-name-wrap'>
-      <%= f.text_area :gender, class:"input-name", id:"gender", placeholder:"例) 男の子or女の子" %> 
-      <%# <%= f.collection_select(:baby_gender_id, BabyGender.all, :id, :name, {}, {class:"select-box", id:"baby_gender_id"}) %> 
-    <%# </div> %>
-  <%# </div> %>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">生年月日</label>
@@ -87,17 +77,9 @@
     </div>
     <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
   </div>
-  <%# <div class="form-group">
-   <h2 class='form-bottom-text'>
-       「会員登録」のボタンを押すことにより、
-      <span>利用規約</span>
-      <br>に同意したものとみなします
-    </h2>
-  </div> %>
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
-  <%# <p class='register-info'>本人情報の登録について</p> %>
 </div>
 <% end %>
 

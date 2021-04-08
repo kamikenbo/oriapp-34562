@@ -3,22 +3,26 @@
 <div class="tweet-tweet">
    <div class='tweet-img-content'> 
        <%= image_tag @tweet.image.variant(resize: '400x400'), class: 'tweet-image' if @tweet.image.attached? %>
+       <% if @tweet.video.attached? %> <video src="<%= rails_blob_path(@tweet.video)%>" type="video/mp4" controls class="tweet-video" ></video>
+       <% end %>
         <ul class="more_list">
+         <% if user_signed_in? && current_user.id == @tweet.user_id %>
           <li>
             <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
           </li>
           <li>
             <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
           </li>
+          <% end %>
         </ul>
    </div>
    <div class="more"> 
       <p><%= @tweet.content %></p>
-
+   
   <div class="container">
     <% if user_signed_in? %>
       <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.text_area :text, placeholder: "コメントする", class:"content-text" %>
         <%= form.submit "SEND" %>
       <% end %>
     <% else %>
@@ -34,3 +38,5 @@
       <% end %>
     </div>
   </div>
+</div>
+  

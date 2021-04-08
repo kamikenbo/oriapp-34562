@@ -5,3 +5,9 @@
   justify-content:center;
   padding-top: 40px;
 }
+
+.content-text {
+  padding-bottom:40px;
+  margin: 10px;
+  width: 65%;
+}

@@ -1,6 +1,10 @@
 class TweetsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
 def index
   @tweets = Tweet.includes(:user).order("created_at DESC")
+  @search_params = tweet_search_params  
+  @tweet = Tweet.search(@search_params).includes(:user)  
 end
 
 def new
@@ -17,6 +21,7 @@ def create
 end
 
 def destroy
+  @tweet = Tweet.find(params[:id])
   tweet = Tweet.find(params[:id]) 
   tweet.destroy
 end
@@ -36,9 +41,17 @@ def show
   @comments = @tweet.comments.includes(:user)
 end
 
+def search
+  @search_params = tweet_search_params  
+  @tweets = Tweet.search(@search_params) 
+end
+
 private
   def tweet_params
-    params.require(:tweet).permit(:content,:image,:category_id,:condition_id,:baby_age_id,:baby_gender_id).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:content,:image,:category_id,:condition_id,:baby_age_id,:baby_gender_id,:video).merge(user_id: current_user.id)
   end
 
+  def tweet_search_params
+     params.fetch(:search, {}).permit(:content, :category_id, :condition_id, :baby_age_id, :baby_gender_id)
+  end
 end

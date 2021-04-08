@@ -11,8 +11,6 @@
   width: 100%;
 }
 
-
-
 .contents-top{
   text-align: center;
   margin-top: 80px;
@@ -28,7 +26,7 @@ h3 {
   display: inline-block;
   position: relative;
   padding: 0 55px;
-  margin-left: 40%;
+  margin-left: 38%;
 
 }
 
@@ -59,7 +57,6 @@ h3:after {
 
 li {
   list-style: none;
-  
 }
 
 .middle-image {
@@ -75,7 +72,6 @@ li {
   margin-right: 40px;
   font-size: 20px;
   color:black;
-  
 }
 
 .li-style {
@@ -86,11 +82,16 @@ li {
   justify-content: space-evenly;
 }
 
-
-.blue {
+.text-blue {
   color:mediumturquoise;
   font-size: 25px;
 }
+
+.text-red {
+  color:red;
+  font-size: 25px;
+}
+
 h5 {
   position: relative;
   color: black;
@@ -133,17 +134,70 @@ h5:before {
 .more_list {
   width: 20%;
   display: flex;
-  text-align: center;
   justify-content: space-around;
+  padding: 20px;
   margin: auto;
 }
 
 .more {
-  width: 35%;
+  width:40%;
   text-align: center;
   justify-content:center;
   margin: auto;
-  margin-bottom: 20px;
+  
 }
 
+.check-contents {
+  display:none;
+}
 
+.check-btn {
+  background-color: #57e9e9;
+  border-radius: 20px;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 30px 0px;
+  padding: 5px;
+}
+
+.check-btn:hover {
+background-color:rgba(85, 215, 238, 0.6) ;
+}
+
+.check-js {
+  border-radius: 60px;
+  color:white;
+  border: 0;
+  font-size: 20px;
+  background-color: red;
+  margin: 20px 40px 30px 0px;
+  text-align: center;
+  padding: 5px;
+}
+
+.check-content{
+  margin-bottom: 10px;
+}
+
+.category{
+  margin-bottom: 10px;
+}
+
+.condition{ 
+  margin-bottom: 10px;
+}
+
+.baby-age{
+  margin-bottom: 10px;
+}
+
+.baby-gender{
+  margin-bottom: 10px;
+}
+
+.tweet-video {
+  width: 400px;
+  height: 400px;
+}

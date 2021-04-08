@@ -1,17 +1,22 @@
 <%= render partial: "shared/second_header"%>
-<div class= "tweet-mypg"><%="#{@nickname}さんのMY PAGE"%></div>
- <div class="contents-row">
-   <% @tweets.each do |tweet| %>
+<% unless @search_params.blank? %>
+ <% @tweets.each do |tweet| %>
    <div class="tweet-tweet">
    <div class='tweet-img-content'> 
        <%= image_tag tweet.image.variant(resize: '400x400'), class: 'tweet-image' if tweet.image.attached? %>
        <% if tweet.video.attached? %> <video src="<%= rails_blob_path(tweet.video)%>" type="video/mp4" controls class="tweet-video" ></video>
        <% end %>
+       <div class="more"> 
+         <p><%= tweet.content %></p>
+           <span class="name">
+           <strong>投稿者：<%= link_to tweet.user.nickname, "/users/#{tweet.user_id}" %></strong>
+           </span>
+   </div>
         <ul class="more_list">
           <li>
             <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
           </li>
-           <% if user_signed_in? && current_user.id == tweet.user_id %>
+          <% if user_signed_in? && current_user.id == tweet.user_id %>
           <li>
             <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
           </li>
@@ -21,9 +26,7 @@
           <% end %>
         </ul>
    </div>
-   <div class="more"> 
-      <p><%= tweet.content %></p>
+   
    </div>
-   </div>
-    
   <% end %>
+<% end %>

@@ -96,6 +96,7 @@
 .input-birth-wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .input-birth-wrap select {
@@ -152,10 +153,3 @@
   cursor: pointer;
   border-radius: 20px;
 }
-
-/* .register-info {
-  margin: 30px 180px 0 0;
-  color: #0099e8;
-  text-align: center;
-  cursor: pointer;
-} */

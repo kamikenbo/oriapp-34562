@@ -3,10 +3,18 @@
 <div class="tweet-contents">
  <div class="tweet-header ">
   <div class="tweet-main">
-    <div class=tweet-text>投稿する</div>
+    <div class=tweet-text>投稿</div>
     <%= form_with(model: @tweet, local: true) do |f| %>
-      <%= f.file_field :image, id: "image" ,class:"tweet-image-view"%>
-      <%# <%= f.file_field :video, id: "video" ,class:"tweet-type-view"%> 
+     <div class="tweet-image-video">
+     <p1>※画像と動画は一回の投稿につき一つのみで、どちらかは必ず投稿してください</p1>
+　　　 <div class = "tweet-image-view">
+      <p2>画像（jpegもしくはpng）</p2>
+        <%= f.file_field :image, id: "image" %>
+      </div>
+      <div class ="tweet-video-view">
+      <p2>動画（mp４のみ）</p2>
+        <%= f.file_field :video, id: "video" %>
+      </div>
       <div class="content">
       <%= f.text_area  :content, id: "content", placeholder: "概要",class:"tweet-content-view" %>
       </div>
