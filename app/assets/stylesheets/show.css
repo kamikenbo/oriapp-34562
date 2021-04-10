@@ -1,3 +1,11 @@
+.tweet-tweet-comment{
+  border: 10px dotted #f5f5f5;
+  
+  margin-bottom: 10px;
+  border-radius: 30px;
+
+}
+
 .tweet-mypg {
   font-size: 40px;
   height: 50%;
@@ -9,5 +17,10 @@
 .content-text {
   padding-bottom:40px;
   margin: 10px;
-  width: 65%;
+  width: 45%;
+}
+
+.container{
+  text-align: center;
+  margin: auto;
 }

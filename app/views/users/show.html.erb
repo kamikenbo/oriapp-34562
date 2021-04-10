@@ -7,6 +7,9 @@
        <%= image_tag tweet.image.variant(resize: '400x400'), class: 'tweet-image' if tweet.image.attached? %>
        <% if tweet.video.attached? %> <video src="<%= rails_blob_path(tweet.video)%>" type="video/mp4" controls class="tweet-video" ></video>
        <% end %>
+       <div class="more"> 
+      <p><%= tweet.content %></p>
+   </div>
         <ul class="more_list">
           <li>
             <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
@@ -21,9 +24,6 @@
           <% end %>
         </ul>
    </div>
-   <div class="more"> 
-      <p><%= tweet.content %></p>
    </div>
-   </div>
-    
   <% end %>
+  <%= render partial: "shared/footer"%>

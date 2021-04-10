@@ -4,28 +4,6 @@
  <div class="tweet-header ">
   <div class="tweet-main">
     <div class=tweet-text>編集する</div>
-    <%= form_with(model: @tweet, local: true) do |f| %>
-      <%= f.file_field :image, id: "image" ,class:"tweet-image-view"%>
-      <%# <%= f.file_field :video, id: "video" ,class:"tweet-type-view"%> 
-      <div class="content">
-      <%= f.text_area  :content, id: "content", placeholder: "概要",class:"tweet-content-view" %>
-      </div>
-      <p>カテゴリー選択</p>
-      <div class="category">
-      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"category_id"}) %>
-      </div>
-      <div class="condition">
-      <%= f.collection_select(:condition_id, Condition.all, :id, :name, {}, {class:"select-box", id:"condition_id"}) %>
-       </div>
-       <div class="baby-age">
-      <%= f.collection_select(:baby_age_id, BabyAge.all, :id, :name, {}, {class:"select-box", id:"baby_age_id"}) %>
-      </div>
-       <div class="baby-gender">
-      <%= f.collection_select(:baby_gender_id, BabyGender.all, :id, :name, {}, {class:"select-box", id:"Baby_gender_id"}) %>
-      </div>
-      <%= f.submit "編集する" ,class:"tweet-btn" %>
-    <% end %>
-  </div>
- </div>
-</div>
+  <%= render partial: "shared/form"%>
+<%= render partial: "shared/footer"%>
 

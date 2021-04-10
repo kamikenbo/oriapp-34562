@@ -52,7 +52,6 @@ h3:after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 1px dotted black;
 }
 
 li {
@@ -60,16 +59,16 @@ li {
 }
 
 .middle-image {
-  width: 50vh;
+  width: 40vh;
   border-radius: 50%;
   margin-left: 40px;
+  
 }
 
-.middle-content {
+.middle-list {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  margin-right: 40px;
+  margin-left: 20px;
   font-size: 20px;
   color:black;
 }
@@ -79,15 +78,19 @@ li {
   width: 100%;
   background-color:white;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
-.text-blue {
+.content-blue {
   color:mediumturquoise;
   font-size: 25px;
 }
 
-.text-red {
+.middle-content{
+text-align: center;
+}
+
+.content-red {
   color:red;
   font-size: 25px;
 }
@@ -124,31 +127,14 @@ h5:before {
   padding-top: 40px;
 } 
 
-.tweet-img-content {
-  height: 50%;
-  text-align: center;
-  justify-content:center;
-  padding-top: 40px;
-}
-
-.more_list {
-  width: 20%;
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  margin: auto;
-}
-
-.more {
-  width:40%;
-  text-align: center;
-  justify-content:center;
-  margin: auto;
-  
-}
-
 .check-contents {
   display:none;
+  text-align: center;
+}
+
+.check-content {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 .check-btn {
@@ -175,26 +161,6 @@ background-color:rgba(85, 215, 238, 0.6) ;
   margin: 20px 40px 30px 0px;
   text-align: center;
   padding: 5px;
-}
-
-.check-content{
-  margin-bottom: 10px;
-}
-
-.category{
-  margin-bottom: 10px;
-}
-
-.condition{ 
-  margin-bottom: 10px;
-}
-
-.baby-age{
-  margin-bottom: 10px;
-}
-
-.baby-gender{
-  margin-bottom: 10px;
 }
 
 .tweet-video {

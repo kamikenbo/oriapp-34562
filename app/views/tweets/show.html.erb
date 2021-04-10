@@ -1,10 +1,13 @@
 <%= render partial: "shared/second_header"%>
 
-<div class="tweet-tweet">
+<div class="tweet-tweet-comment">
    <div class='tweet-img-content'> 
        <%= image_tag @tweet.image.variant(resize: '400x400'), class: 'tweet-image' if @tweet.image.attached? %>
        <% if @tweet.video.attached? %> <video src="<%= rails_blob_path(@tweet.video)%>" type="video/mp4" controls class="tweet-video" ></video>
        <% end %>
+       <div class="more"> 
+         <p><%= @tweet.content %></p>
+       </div>
         <ul class="more_list">
          <% if user_signed_in? && current_user.id == @tweet.user_id %>
           <li>
@@ -16,10 +19,7 @@
           <% end %>
         </ul>
    </div>
-   <div class="more"> 
-      <p><%= @tweet.content %></p>
-   
-  <div class="container">
+   <div class="container">
     <% if user_signed_in? %>
       <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
         <%= form.text_area :text, placeholder: "コメントする", class:"content-text" %>
@@ -37,6 +37,7 @@
         </p>
       <% end %>
     </div>
-  </div>
-</div>
+   </div>
+   </div>
+<%= render partial: "shared/footer"%>
   

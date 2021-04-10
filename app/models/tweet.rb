@@ -20,12 +20,11 @@ class Tweet < ApplicationRecord
   scope :baby_age_id_is, -> (baby_age_id) { where(baby_age_id: baby_age_id) if baby_age_id.present? }
   scope :baby_gender_id_is, -> (baby_gender_id) { where(baby_gender_id: baby_gender_id) if baby_gender_id.present? }
   
-  with_options presence: true do
-    validates :content
-    validates :image,unless: :has_attached?
-    validates :video, unless: :was_attached?
-  end
+    validates :content, presence: true
 
+   
+  
+  
   with_options presence: true, numericality: { other_than: 1 } do
     validates :category_id
     validates :condition_id
