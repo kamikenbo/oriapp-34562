@@ -22,7 +22,7 @@
    <div class="container">
     <% if user_signed_in? %>
       <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", class:"content-text" %>
+        <%= form.text_area :text, placeholder: "コメントする", class:"comment-text" %>
         <%= form.submit "SEND" %>
       <% end %>
     <% else %>
@@ -33,8 +33,11 @@
       <% @comments.each do |comment| %>
         <p>
           <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
-          <%= comment.text %>
+           <%= comment.text %>
         </p>
+          <time datetime="<%= comment.created_at %>">
+            <%= time_ago_in_words(comment.created_at) + "前"%>
+          </time>
       <% end %>
     </div>
    </div>

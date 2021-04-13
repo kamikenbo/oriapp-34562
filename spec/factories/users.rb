@@ -5,6 +5,6 @@ FactoryBot.define do
     password              { '1a' + Faker::Internet.password(min_length: 6) }
     password_confirmation {password}
     baby_name             {"太郎"}
-    birthday              { Faker::Date.backward }
+    baby_birthday         { Faker::Date.backward }
   end
 end

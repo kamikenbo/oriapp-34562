@@ -4,7 +4,16 @@
   width: 75%;
   margin-bottom: 10px;
   border-radius: 30px;
-  
+}
+
+.tweet-text{
+  font-weight:bold;
+}
+
+.tweet-tweet time{
+  text-align: right;
+  color: grey;
+  font-size: 15px;
 }
 
 .tweet-img-content {
@@ -24,7 +33,7 @@
 
 .more {
   width:40%;
-  text-align: center;
+  text-align: left;
   justify-content:center;
   margin: auto;
 }

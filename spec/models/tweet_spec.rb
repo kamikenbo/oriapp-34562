@@ -21,52 +21,52 @@ RSpec.describe Tweet, type: :model do
       it 'contentが空では投稿できない' do
         @tweet.content = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Content can't be blank")
+        expect(@tweet.errors.full_messages).to include("Contentを入力してください")
       end
       it 'category_idが空では投稿できない' do
         @tweet.category_id = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include('Category is not a number')
+        expect(@tweet.errors.full_messages).to include('Categoryを入力してください')
       end
       it 'category_idのidが1では登録できない' do
         @tweet.category_id = 1
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include('Category must be other than 1')
+        expect(@tweet.errors.full_messages).to include('Categoryは1以外の値にしてください')
       end
       it 'condition_idが空では投稿できない' do
         @tweet.condition_id = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include('Condition is not a number')
+        expect(@tweet.errors.full_messages).to include('Conditionを入力してください')
       end
       it 'condition_idのidが1では登録できない' do
         @tweet.condition_id = 1
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include('Condition must be other than 1')
+        expect(@tweet.errors.full_messages).to include('Conditionは1以外の値にしてください')
       end
       it 'baby_age_idが空では投稿できない' do
         @tweet.baby_age_id = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include('Baby age is not a number')
+        expect(@tweet.errors.full_messages).to include('Baby ageを入力してください')
       end
       it 'baby_age_idのidが1では登録できない' do
         @tweet.baby_age_id = 1
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include('Baby age must be other than 1')
+        expect(@tweet.errors.full_messages).to include('Baby ageは1以外の値にしてください')
       end
       it 'baby_gender_idが空では投稿できない' do
         @tweet.baby_gender_id = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include('Baby gender is not a number')
+        expect(@tweet.errors.full_messages).to include('Baby genderを入力してください')
       end
       it 'baby_gender_idのidが1では登録できない' do
         @tweet.baby_gender_id = 1
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include('Baby gender must be other than 1')
+        expect(@tweet.errors.full_messages).to include('Baby genderは1以外の値にしてください')
       end
       it 'ユーザーが紐付いていなければ投稿できない' do
         @tweet.user = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include('User must exist')
+        expect(@tweet.errors.full_messages).to include('Userを入力してください')
       end
     end
   end

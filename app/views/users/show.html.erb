@@ -2,7 +2,7 @@
 <div class= "tweet-mypg"><%="#{@nickname}さんのMY PAGE"%></div>
  <div class="contents-row">
    <% @tweets.each do |tweet| %>
-   <div class="tweet-tweet">
+   <div class="tweet-tweet-comment">
    <div class='tweet-img-content'> 
        <%= image_tag tweet.image.variant(resize: '400x400'), class: 'tweet-image' if tweet.image.attached? %>
        <% if tweet.video.attached? %> <video src="<%= rails_blob_path(tweet.video)%>" type="video/mp4" controls class="tweet-video" ></video>

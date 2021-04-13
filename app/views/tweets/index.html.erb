@@ -1,6 +1,7 @@
 <%= render partial: "shared/header"%>
 
 <div class="contents">
+
   <div class="first-view">
        <%= link_to image_tag("cache_Messagep37593.jpeg", class:"top-image"), "#" %>
   </div>
@@ -20,31 +21,37 @@
           <%= link_to image_tag("IMG_8693.jpg", class:"middle-image"), "#" %>
           <h4 class="middle-list"><span class= "content-blue">3,イヤイヤ期</span><br>・出た！！のけぞりポーズ<br>・いったい何をすればおさまるの？<br>・注意点をそらすアイテムがあればおさまるかも？</h4>
         </li>
-        <h4 class="middle-content"><span class= "content-red">悩んでることの対処法を検索しよう！</span><br>下記のボタンSEARCHを押していただくことで投稿の内容を絞ってください！<br>入力項目が一つだけでも絞ることができます！<br>なんでも調べてみてください！</h4>
-       <div class = check-js id="check">SEARCH</div>
+        <h4 class="middle-content"><span class= "content-red">悩んでることの対処法を検索しよう！</span><br>下記の検索ボタンを押していただくことで投稿の内容を絞ってください！<br>入力項目が一つだけでも絞ることができます！<br>なんでも調べてみてください！</h4>
+       <div class = check-js id="check"><i class="fas fa-search"></i>検索</div>
    </ul>
 
    <%= form_with(scope: :search, url: search_tweets_path, method: :get, local: true) do |f| %>
-   <div class = "check-contents" id="pull-down">
+   <div class = "check-contents-js" id="pull-down">
+     <div class="check-contents">
       <div class="check-content">
-      <%= f.text_field :content, value: @search_params[:content], placeholder: '投稿ワード' %>
+      <p>投稿内容</p>
+      <%= f.text_field :content, value: @search_params[:content], placeholder: '投稿ワード' , class:"content-box"%>
       </div>
       <div class="check-content">
-      <%= f.collection_select(:category_id, Category.all, :id, :name, include_blank: '指定なし', selected: @search_params[:category_id]) %> 
+      <p>状況</p>
+      <%= f.collection_select:category_id, Category.all, :id, :name, {include_blank: '指定なし', selected: @search_params[:category_id]}, {class:'check-box'} %> 
       </div>
       <div class="check-content">
-      <%= f.collection_select(:condition_id, Condition.all, :id, :name, include_blank: '指定なし', selected: @search_params[:condition_id]) %> 
+      <p>状態</p>
+      <%= f.collection_select:condition_id, Condition.all, :id, :name, {include_blank: '指定なし', selected: @search_params[:condition_id]}, {class:'check-box'} %> 
        </div>
        <div class="check-content">
-      <%= f.collection_select(:baby_age_id, BabyAge.all, :id, :name, include_blank: '指定なし', selected: @search_params[:baby_age_id]) %>
+       <p>時期</p>
+      <%= f.collection_select:baby_age_id, BabyAge.all, :id, :name, {include_blank: '指定なし', selected: @search_params[:baby_age_id]}, {class:'check-box'} %>
      </div>
        <div class="check-content">
-      <%= f.collection_select(:baby_gender_id, BabyGender.all, :id, :name, include_blank: '指定なし', selected: @search_params[:baby_gender_id]) %> 
+       <p>性別</p>
+      <%= f.collection_select:baby_gender_id, BabyGender.all, :id, :name, {include_blank: '指定なし',selected: @search_params[:baby_gender_id]} , {class:'check-box'}%> 
       </div>
-      <%= f.submit"投稿を検索する",class:"check-btn"%>
-   </div>
+     </div>
+      <%= f.submit"この条件で検索する",class:"check-btn"%>
+    </div>
 <% end %>
-   
   <h5>投稿一覧</h5>
   <div class="contents-row">
    <% @tweets.each do |tweet| %>

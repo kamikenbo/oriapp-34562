@@ -10,11 +10,11 @@ const pullDownButton = document.getElementById("check")
 const pullDownParents = document.getElementById("pull-down")
 
 pullDownButton.addEventListener('mouseover', function(){
-  this.setAttribute("style", "background-color:#FFBEDA;")
+  this.setAttribute("style", "background-color:#f5f5f5;")
   })
 
   pullDownButton.addEventListener('mouseout', function(){
-    this.removeAttribute("style", "background-color:#FFBEDA;")
+    this.removeAttribute("style", "background-color:#f5f5f5;")
   })
 
   pullDownButton.addEventListener('click', function() {
