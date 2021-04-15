@@ -11,8 +11,13 @@
        こんにちは、
          <%= link_to "#{current_user.nickname}さん", "/users/#{current_user.id}", class: :greeting__link%>
         、
-         <%= link_to "#{current_user.baby_name}ちゃん", "/users/#{current_user.id}", class: :greeting__link%>
-
+         <%= link_to "#{current_user.baby_name}さん", "/users/#{current_user.id}", class: :greeting__link%>
+         （今日で<%= (Date.today.strftime("%Y%m%d").to_i - current_user.baby_birthday.strftime("%Y%m%d").to_i) / 10000%>歳
+         <% if (Date.today.strftime("%m%d").to_i - current_user.baby_birthday.strftime("%m%d").to_i) / 100 >= 0  %>
+         <%= (Date.today.strftime("%m%d").to_i - current_user.baby_birthday.strftime("%m%d").to_i) / 100 %>ヶ月ですね）
+         <% else %> 
+          <%= (Date.today.strftime("%m%d").to_i - current_user.baby_birthday.strftime("%m%d").to_i) / 100 + 12 %>ヶ月ですね）
+         <% end %> 
       </div>
 
         <% else %> 

@@ -1,5 +1,5 @@
 <%= render partial: "shared/second_header"%>
-<div class= "tweet-mypg"><%="#{@nickname}さんのMY PAGE"%></div>
+<div class= "tweet-mypg"><i class="fas fa-baby"></i><%="#{@nickname}さんのMY PAGE"%></div>
  <div class="contents-row">
    <% @tweets.each do |tweet| %>
    <div class="tweet-tweet-comment">
@@ -9,7 +9,7 @@
        <% end %>
        <div class="more"> 
       <p><%= tweet.content %></p>
-   </div>
+      </div>
         <ul class="more_list">
           <li>
             <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
@@ -26,4 +26,6 @@
    </div>
    </div>
   <% end %>
+  
   <%= render partial: "shared/footer"%>
+  

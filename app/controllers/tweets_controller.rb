@@ -1,5 +1,7 @@
 class TweetsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index]
+  before_action :set_tweet, only: [:edit, :destroy, :show]
+  before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
 def index
   @tweets = Tweet.includes(:user).order("created_at DESC")
@@ -21,13 +23,11 @@ def create
 end
 
 def destroy
-  @tweet = Tweet.find(params[:id])
   tweet = Tweet.find(params[:id]) 
   tweet.destroy
 end
 
 def edit
-  @tweet = Tweet.find(params[:id])
 end
 
 def update
@@ -36,14 +36,15 @@ def update
 end
 
 def show
-  @tweet = Tweet.find(params[:id])
   @comment = Comment.new
   @comments = @tweet.comments.includes(:user).order("created_at DESC")
+  @like = Like.new
+
 end
 
 def search
   @search_params = tweet_search_params  
-  @tweets = Tweet.search(@search_params) 
+  @tweets = Tweet.search(@search_params).order("created_at DESC")
 end
 
 private
@@ -53,5 +54,13 @@ private
 
   def tweet_search_params
      params.fetch(:search, {}).permit(:content, :category_id, :condition_id, :baby_age_id, :baby_gender_id)
+  end
+
+  def set_tweet
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def contributor_confirmation
+    redirect_to action: :index unless current_user.id == @tweet.user_id
   end
 end

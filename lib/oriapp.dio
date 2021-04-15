@@ -1,6 +1,6 @@
 <mxfile>
     <diagram id="4EjgxnA18w01wMsiEkk7" name="ページ1">
-        <mxGraphModel dx="189" dy="343" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="757" dy="440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -42,6 +42,15 @@
                         <mxPoint x="660" y="370" as="sourcePoint"/>
                         <mxPoint x="580" y="360" as="targetPoint"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="like テーブル" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="10" width="160" height="168" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="nickname&#10;email&#10;password&#10;baby_name&#10;baby_birthday&#10;baby_current_age&#10;baby_gender&#10;image" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" vertex="1" parent="36">
+                    <mxGeometry y="30" width="160" height="138" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="36" source="37" target="37">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

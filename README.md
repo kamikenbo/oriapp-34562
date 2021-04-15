@@ -54,7 +54,8 @@
 association
 -has_many :tweets
 -has_many :comments
-
+-has_many :likes
+-has_many :tweets, through: :likes
 
 
 ## tweets テーブル
@@ -71,6 +72,8 @@ association
 association
 -belongs_to :user
 -has_many :comments
+-has_many :likes
+-has_many :users, through: :likes
 
 active hash
 -belongs_to :category_id
@@ -78,11 +81,12 @@ active hash
 -belongs_to :baby_age_id
 -belongs_to :baby_gender_id
 
-## messages テーブル
+
+
+## like テーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| text    | text       | null: false                               |
 | user    | references | null: false, foreign_key: true |
 | tweet   | references | null: false, foreign_key: true |
 

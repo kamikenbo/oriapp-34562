@@ -38,6 +38,15 @@
 
 .comments time{
   font-size: 13px;
-  color:grey;
-  
+  color:grey; 
+}
+
+.click-js{
+  width:120px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.click-iine{
+  display: none;
 }
