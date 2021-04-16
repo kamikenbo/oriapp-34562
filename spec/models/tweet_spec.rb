@@ -21,7 +21,7 @@ RSpec.describe Tweet, type: :model do
       it 'contentが空では投稿できない' do
         @tweet.content = ''
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Contentを入力してください")
+        expect(@tweet.errors.full_messages).to include('Contentを入力してください')
       end
       it 'category_idが空では投稿できない' do
         @tweet.category_id = ''
