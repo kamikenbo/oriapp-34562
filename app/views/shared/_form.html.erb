@@ -2,7 +2,7 @@
 <%= render "shared/error_messages", model: f.object %>
      <div class="tweet-image-video">※画像と動画はなくても投稿できます</div>
 　　　 <div class = "tweet-image-view">
-      <p>画像（jpegもしくはpng）</p>
+      <p>画像（JPEG,PNG,GIF,BMPのみ）</p>
         <%= f.file_field :image, id: "image" %>
       </div>
       <div class ="tweet-video-view">

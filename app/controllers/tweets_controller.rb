@@ -7,16 +7,17 @@ class TweetsController < ApplicationController
     @tweets = Tweet.includes(:user).order('created_at DESC')
     @search_params = tweet_search_params
     @tweet = Tweet.search(@search_params).includes(:user)
+    
   end
 
   def new
     @tweet = Tweet.new
+    
   end
 
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      
       redirect_to root_path
     else
       render :new
