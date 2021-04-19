@@ -58,5 +58,4 @@ class Tweet < ApplicationRecord
     self.video.attached?
   end
 
-
 end

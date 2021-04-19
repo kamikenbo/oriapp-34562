@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :set_tweet, only: [:edit, :destroy, :show]
+  before_action :set_tweet, only: [:edit, :destroy, :show, :update]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   def index
