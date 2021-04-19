@@ -37,6 +37,12 @@ class Tweet < ApplicationRecord
     errors.add(:image, "の拡張子が間違っています") unless image.content_type.in?(extension)
   end
 
+  validate :video_content_type, if: :has_attached?
+  def video_content_type
+    extension = ['video/mp4']
+    errors.add(:video, "の拡張子が間違っています") unless video.content_type.in?(extension)
+  end
+
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
@@ -52,6 +58,5 @@ class Tweet < ApplicationRecord
     self.video.attached?
   end
 
-  
 
 end
