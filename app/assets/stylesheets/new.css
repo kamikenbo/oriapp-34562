@@ -95,6 +95,10 @@
   border: 0;
   font-size: 18px;
   text-align: center;
- 
 }
 
+.preview{
+  height: 250px;
+  width: 250px;
+  object-fit: contain;
+}

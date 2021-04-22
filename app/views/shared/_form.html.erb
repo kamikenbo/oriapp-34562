@@ -5,11 +5,12 @@
       <p>画像（JPEG,PNG,GIF,BMPのみ）</p>
         <%= f.file_field :image, id: "image" %>
       </div>
+      <div id="image-list"></div>
       <div class ="tweet-video-view">
       <p>動画（mp４のみ）</p>
         <%= f.file_field :video, id: "video" %>
      </div>
-
+      <div id="video-list"></div>  
       <div class="content">
       <%= f.text_area  :content, id: "content", placeholder: "概要",class:"tweet-content-view" %>
       </div>
