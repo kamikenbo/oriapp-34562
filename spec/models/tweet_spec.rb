@@ -7,7 +7,7 @@ RSpec.describe Tweet, type: :model do
 
   describe 'ツイートの保存' do
     context 'ツイートが投稿できる場合' do
-      it 'content,image,video,category_id,condition_id,baby_age_id,baby_gender_idがあれば投稿できる' do
+      it 'content,category_id,condition_id,baby_age_id,baby_gender_idがあれば投稿できる' do
         expect(@tweet).to be_valid
       end
       it 'image,videoが空でも投稿できる' do

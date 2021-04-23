@@ -38,6 +38,7 @@ class Tweet < ApplicationRecord
   end
 
   validate :video_content_type, if: :has_attached?
+
   def video_content_type
     extension = ['video/mp4']
     errors.add(:video, "の拡張子が間違っています") unless video.content_type.in?(extension)
@@ -49,6 +50,7 @@ class Tweet < ApplicationRecord
   belongs_to :condition
   belongs_to :baby_age
   belongs_to :baby_gender
+
 
   def was_attached?
     self.image.attached?
