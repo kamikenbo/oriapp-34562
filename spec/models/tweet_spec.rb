@@ -11,8 +11,6 @@ RSpec.describe Tweet, type: :model do
         expect(@tweet).to be_valid
       end
       it 'image,videoが空でも投稿できる' do
-        @tweet.image = nil
-        @tweet.video = nil
         @tweet.valid?
         expect(@tweet).to be_valid
       end
@@ -20,6 +18,8 @@ RSpec.describe Tweet, type: :model do
     context 'ツイートが投稿できない場合' do
       it 'contentが空では投稿できない' do
         @tweet.content = ''
+        @tweet.image = nil
+        @tweet.video = nil
         @tweet.valid?
         expect(@tweet.errors.full_messages).to include('Contentを入力してください')
       end

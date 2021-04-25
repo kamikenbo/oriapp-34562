@@ -31,9 +31,10 @@
         </ul>
    </div>
    <div class="container">
-      <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", class:"comment-text" %>
-        <%= form.submit "SEND" %>
+      <%= form_with(model: [@tweet, @comment], local: true) do |f| %>
+      <%= render "shared/error_messages", model: f.object %>
+        <%= f.text_area :text, placeholder: "コメントする", class:"comment-text" %>
+        <%= f.submit "SEND" %>
         <% end %>
     <div class="comments">
       <h4>＜コメント一覧＞</h4>
