@@ -5,6 +5,7 @@
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <%= link_to "Log out", destroy_user_session_path, method: :delete ,class: "post"%>
+            <%= link_to "Account編集", edit_user_path(current_user),class: "post"%>
             <%= link_to "投稿する", new_tweet_path, class: "post" %>
            </div>
        <div class="greeting">
