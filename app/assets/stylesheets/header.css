@@ -1,38 +1,45 @@
 header {
-  height: 110px;
+  height: 120px;
   background-color: #f5f5f5;
-  padding: 10px 0; 
+  display: flex;
 }
 
+.heading {
+  width: 50%;
+  margin: auto 0;
+}
 
-header.header div.header__bar_row h1.grid-6 {
+.title{
   font-size: 40px;
-  line-height: 41px;
-  float: left;
   padding-left: 40px;
-  
 }
 
-header.header div.header__bar_row h1.grid-6 a {
+.title a {
   color:black;
-  display: block;
 }
 
-.user-nav {
+.user-nav{
+  width: 50%;
+}
+
+.user_nav_lists{
+  display: flex;
   float: right;
-  text-align: right;
-  font-size: 30px;
+  margin-top: 43px;
 }
 
 .post {
-  font-size: 20px;
+  font-size: 23px;
   background:white;
   color: black;
-  border-radius: 30px;
-  margin-right: 20px;
+  border-radius: 60px;
+  margin-right: 30px;
 }
 
 .greeting {
-  font-size: 15px;
-  padding-top: 50px;
+  float: right;
+  font-size: 18px;
 }
+
+.greeting__link {
+color: black;
