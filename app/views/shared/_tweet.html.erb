@@ -15,10 +15,10 @@
    <span class="name">
       <strong>投稿者：<%= link_to tweet.user.nickname, "/users/#{tweet.user_id}" %></strong>
       </span>
-      (<i class="far fa-thumbs-up fa-fw fa-lg faa-tada animated"></i><%= tweet.users.count %>)
+      (<i class="far fa-thumbs-up fa-fw fa-lg faa-tada animated"></i><%= tweet.users.count %>件)
    <ul class="more_list">
           <li>
-            <i class="fa fa-comment-o"></i><%= link_to 'コメント', tweet_path(tweet.id), method: :get %>(<%= tweet.comments.count %>)
+            <i class="fa fa-comment-o"></i><%= link_to 'コメント', tweet_path(tweet.id), method: :get %>(<%= tweet.comments.count %>件)
           </li>
           <% if user_signed_in? && current_user.id == tweet.user_id %>
           <li>
