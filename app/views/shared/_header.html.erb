@@ -5,19 +5,19 @@
       <div class= "user-nav">
         <% if user_signed_in? %>
           <ul class="user_nav_lists">
-            <li><%= link_to "Log out", destroy_user_session_path, method: :delete ,class: "post"%></li>
+            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: "post"%></li>
             <li><%= link_to "Account編集", edit_user_path(current_user),class: "post"%></li>
             <li><%= link_to "投稿", new_tweet_path, class: "post" %></li>
           </ul>
         <% else %> 
            <ul class="user_nav_lists"> 
-             <li><%= link_to "Log in", new_user_session_path, class: "post" %></li>
+             <li><%= link_to "ログイン", new_user_session_path, class: "post" %></li>
              <li><%= link_to "新規登録（無料）", new_user_registration_path, class: "post" %></li>
            </ul>
         <% end %> 
      </div>
      </div> 
-   </header>
+  </header>
    <% if user_signed_in? %>
       <div class="greeting">
        こんにちは、

@@ -13,19 +13,19 @@
       <p><%= tweet.content %></p>
    </div>
    <span class="name">
-      <strong>投稿者：<%= link_to tweet.user.nickname, "/users/#{tweet.user_id}" %></strong>
+      <i class="fa fa-user"></i><strong>投稿者：<%= link_to tweet.user.nickname, "/users/#{tweet.user_id}" ,class:"name-list"%></strong>
       </span>
       (<i class="far fa-thumbs-up fa-fw fa-lg faa-tada animated"></i><%= tweet.users.count %>件)
    <ul class="more_list">
           <li>
-            <i class="fa fa-comment-o"></i><%= link_to 'コメント', tweet_path(tweet.id), method: :get %>(<%= tweet.comments.count %>件)
+            <i class="fa fa-comment-o"></i><%= link_to 'コメント', tweet_path(tweet.id), method: :get ,class:"menu-list"%>(<%= tweet.comments.count %>件)
           </li>
           <% if user_signed_in? && current_user.id == tweet.user_id %>
           <li>
-            <%= link_to '編集', edit_tweet_path(tweet.id), method: :get %>
+            <i class="fa fa-edit"></i><%= link_to '編集', edit_tweet_path(tweet.id), method: :get,class:"menu-lists" %>
           </li>
           <li>
-            <%= link_to '削除', tweet_path(tweet.id), data: {confirm: '本当に削除しますか？'}, method: :delete %>
+            <i class="fa fa-trash-o"></i><%= link_to '削除', tweet_path(tweet.id), data: {confirm: '本当に削除しますか？'}, method: :delete,class:"menu-lists" %>
           </li>
           <% end %>
         </ul>

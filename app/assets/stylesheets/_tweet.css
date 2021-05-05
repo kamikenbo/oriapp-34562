@@ -24,11 +24,12 @@
 }
 
 .more_list {
-  width: 22%;
+  width: 25%;
   display: flex;
   justify-content: space-around;
   padding: 20px;
   margin: auto;
+  text-decoration: none;
 }
 
 .more {
@@ -36,4 +37,32 @@
   text-align: left;
   justify-content:center;
   margin: auto;
+}
+
+.name-list{
+  text-decoration: none;
+  color: black;
+}
+
+.name-list:hover{
+  color:grey;
+}
+
+.menu-list{
+  text-decoration: none;
+  color: black;
+}
+
+.menu-list:hover{
+  color: grey;
+}
+
+.menu-lists{
+  text-decoration: none;
+  padding-right: 1px;
+  color: black;
+}
+
+.menu-lists:hover{
+  color: grey;
 }

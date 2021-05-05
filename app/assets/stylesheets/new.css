@@ -1,11 +1,7 @@
 
 .tweet-contents {
   background-color: #f5f5f5;
-  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
   font-size: 18px;
-  text-align: center;
-}
-.tweet-header {
   text-align: center;
 }
 
@@ -14,12 +10,13 @@
   background-color: #FFF;
   padding: 30px 0;
   width: 80%;
-  margin: auto;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .tweet-text {
   font-size: 30px;
   margin-bottom: 20px;
+  
 }
 
 .tweet-image-video {
@@ -32,7 +29,7 @@
 
 .category-select p{
   font-size: 15px;
-  margin: 20px 150px 0 0;
+  margin: 20px 170px 0 0;
 }
 
 .tweet-content-view {
@@ -43,20 +40,24 @@
 
 .select-box {
   height: 30px;
-  width: 180px;
+  width: 200px;
   background-color: #f5f5f5;
-  padding-left: 20px;
+  padding-left: 10px;
   margin-bottom: 20px;
 }
 
 .tweet-btn {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 180px;
   color: black;
-  border: 2px solid black;
+  border: 1px solid black;
   font-size: 20px;
-  width: 15%;
+  width: 10%;
   margin: 40px;
+}
+
+.tweet-btn:hover{
+  color: grey;
 }
 
 .indispensable {
