@@ -1,5 +1,6 @@
 .contents {
   background-color: white;
+  height: 100%;
 }
 
 .first-view{
@@ -23,6 +24,10 @@
   margin-top: 80px;
   font-size: 15px;
   font-family: serif;
+}
+
+.contents-middle{
+  position: relative;
 }
 
 h3 {

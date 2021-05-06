@@ -4,6 +4,7 @@
   width: 75%;
   margin-bottom: 10px;
   border-radius: 30px;
+  margin: auto;
 }
 
 .tweet-text{
@@ -11,20 +12,18 @@
 }
 
 .tweet-tweet time{
-  text-align: right;
   color: grey;
   font-size: 15px;
 }
 
 .tweet-img-content {
   height: 50%;
-  text-align: center;
-  justify-content:center;
+  
   padding-top: 40px;
 }
 
 .more_list {
-  width: 25%;
+  width: 27%;
   display: flex;
   justify-content: space-around;
   padding: 20px;
@@ -34,7 +33,7 @@
 
 .more {
   width:40%;
-  text-align: left;
+  
   justify-content:center;
   margin: auto;
 }
@@ -59,7 +58,7 @@
 
 .menu-lists{
   text-decoration: none;
-  padding-right: 1px;
+  padding-right: 10px;
   color: black;
 }
 
