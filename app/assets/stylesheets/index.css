@@ -60,6 +60,14 @@ h3:after {
   right: 0;
 }
 
+.contents-middle h6{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .contents-middle-lists {
   display: flex;
   flex-direction: column;

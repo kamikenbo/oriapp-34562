@@ -10,16 +10,17 @@
   </div>
   <div class="contents-middle">
    <h3>何ができるの？</h3>
+   <h6>食事、遊び、イヤイヤ期の悩み事をユーザー同士で共有して解決しましょう！</h6>
    <ul class="contents-middle-lists">
         <li class="li-style">  
           <%= link_to image_tag("detail1_2fc7d375-0df9-411d-bca0-f153e2f57af9.jpeg", class:"middle-image"), "#" %>
-          <h4 class="middle-list"><span class= "content-blue">1,食事</span><br>・離乳食のあげる時期によって食べれるものが違う<br>・冷凍することで準備が楽にもなる<br>・お父さんが食べる見本を見せたら食べるかもしれない</h4>
+          <h4 class="middle-list"><span class= "content-blue">1,食事</span><br>・離乳食のあげる時期によって食べれるものが違う<br>・冷凍することで準備が楽にもなる<br>・お父さんが食べる見本を見せたら食べるかもしれない！</h4>
         <li class="li-style">  
           <%= link_to image_tag("IMG_5941.jpeg", class:"middle-image"), "#" %>
-          <h4 class="middle-list"><span class= "content-blue">２,遊び</span><br>・この時期の子供に適切な遊びはなんだろう<br>・与えるおもちゃは何がいいだろう<br>・お父さんが絵本を読んでくれたら喜ぶかもしれない</h4>
+          <h4 class="middle-list"><span class= "content-blue">２,遊び</span><br>・この時期の子供に適切な遊びはなんだろう<br>・与えるおもちゃは何がいいだろう<br>・お父さんが絵本を読んでくれたら喜ぶかもしれない！</h4>
         <li class="li-style">  
           <%= link_to image_tag("IMG_8693.jpg", class:"middle-image"), "#" %>
-          <h4 class="middle-list"><span class= "content-blue">3,イヤイヤ期</span><br>・出た！！のけぞりポーズ<br>・いったい何をすればおさまるの？<br>・注意点をそらすアイテムがあればおさまるかも？</h4>
+          <h4 class="middle-list"><span class= "content-blue">3,イヤイヤ期</span><br>・出た！！のけぞりポーズ<br>・いったい何をすればおさまるの？<br>・注意点をそらす別の何かをすればおさまるかも！</h4>
         </li>
         <h4 class="middle-content"><span class= "content-red">悩んでることの対処法を検索しよう！</span><br>下記の検索ボタンを押していただくことで投稿の内容を絞ってください！<br>入力項目が一つだけでも絞ることができます！<br>なんでも調べてみてください！</h4>
        <div class = check-js id="check"><i class="fas fa-search"></i>検索</div>
@@ -29,7 +30,7 @@
    <div class = "check-contents-js" id="pull-down">
      <div class="check-contents">
       <div class="check-content">
-      <p>投稿内容</p>
+      <p>投稿</p>
       <%= f.text_field :content, value: @search_params[:content], placeholder: '投稿ワード' , class:"content-box"%>
       </div>
       <div class="check-content">

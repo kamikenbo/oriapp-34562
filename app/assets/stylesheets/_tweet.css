@@ -1,9 +1,10 @@
 .tweet-tweet{
   border: 10px dotted #f5f5f5;
-  display: inline-block;
   width: 75%;
   margin-bottom: 10px;
   border-radius: 30px;
+  text-align: center;
+  /* display: inline-block; */
   margin: auto;
 }
 
@@ -18,7 +19,6 @@
 
 .tweet-img-content {
   height: 50%;
-  
   padding-top: 40px;
 }
 
@@ -33,7 +33,6 @@
 
 .more {
   width:40%;
-  
   justify-content:center;
   margin: auto;
 }
